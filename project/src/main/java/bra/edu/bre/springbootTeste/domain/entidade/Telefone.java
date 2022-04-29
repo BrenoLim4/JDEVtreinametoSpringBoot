@@ -24,9 +24,10 @@ public class Telefone implements Serializable {
     private String tipo;
     @Column(nullable = false)
     private String numero;
-    @ManyToOne
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id", nullable = false)
-    private User usuario;
+//    @ManyToOne
+//    @JoinColumn(name = "id_usuario", referencedColumnName = "id", nullable = false)
+    @Column(name = "id_usuario", nullable = false)
+    private Long idUsuario;
 
     @Override
     public String toString() {
@@ -41,7 +42,7 @@ public class Telefone implements Serializable {
 
         private String tipo;
         private String numero;
-        private User usuario;
+        private Long usuario;
 
         public TelefoneBuilder(){
 
@@ -57,7 +58,7 @@ public class Telefone implements Serializable {
             return this;
         }
 
-        public TelefoneBuilder setUsuario(User usuario){
+        public TelefoneBuilder setUsuario(Long usuario){
             this.usuario = usuario;
             return this;
         }

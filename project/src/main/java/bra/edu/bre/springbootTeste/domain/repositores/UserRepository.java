@@ -12,7 +12,9 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    List<User> findAllByNomeContains(String nome);
+
+    @Query(value = "select u from User u where trim(u.nome) like %?1%")
+    List<User> buscarPorNome(String nome);
 
     //3 formas de ser feita a consulta
     //1

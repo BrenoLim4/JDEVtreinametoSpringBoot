@@ -29,7 +29,7 @@ public class UserServices {
     }
 
     public List<User> findAllByNome(String nome) {
-        return repository.findAllByNomeContains(nome);
+        return repository.buscarPorNome(nome);
     }
 
     public void delete(User obj) {

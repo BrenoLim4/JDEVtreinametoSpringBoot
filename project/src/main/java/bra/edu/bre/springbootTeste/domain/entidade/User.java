@@ -19,7 +19,7 @@ public class User implements Serializable {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     @Column
     private String nome;
@@ -27,6 +27,6 @@ public class User implements Serializable {
     private String login;
     @Column
     private String senha;
-    @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<Telefone> telefones;
 }
