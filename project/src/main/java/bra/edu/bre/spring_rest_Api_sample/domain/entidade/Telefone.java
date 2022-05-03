@@ -1,10 +1,9 @@
-package bra.edu.bre.springbootTeste.domain.entidade;
+package bra.edu.bre.spring_rest_Api_sample.domain.entidade;
 
-import com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.XmlToken;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,6 +1,6 @@
-package bra.edu.bre.springbootTeste.domain.repositores;
+package bra.edu.bre.spring_rest_Api_sample.domain.repositores;
 
-import bra.edu.bre.springbootTeste.domain.entidade.Telefone;
+import bra.edu.bre.spring_rest_Api_sample.domain.entidade.Telefone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -1,8 +1,8 @@
-package bra.edu.bre.springbootTeste.domain.services;
+package bra.edu.bre.spring_rest_Api_sample.domain.services;
 
-import bra.edu.bre.springbootTeste.domain.entidade.Telefone;
-import bra.edu.bre.springbootTeste.domain.repositores.TelefoneRepository;
-import bra.edu.bre.springbootTeste.domain.services.exception.ResourceNotFoundException;
+import bra.edu.bre.spring_rest_Api_sample.domain.entidade.Telefone;
+import bra.edu.bre.spring_rest_Api_sample.domain.repositores.TelefoneRepository;
+import bra.edu.bre.spring_rest_Api_sample.domain.services.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

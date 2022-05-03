@@ -1,4 +1,4 @@
-package bra.edu.bre.springbootTeste.domain.services.exception;
+package bra.edu.bre.spring_rest_Api_sample.domain.services.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 

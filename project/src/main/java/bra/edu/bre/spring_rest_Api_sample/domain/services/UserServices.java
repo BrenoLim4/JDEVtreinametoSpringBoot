@@ -1,9 +1,9 @@
-package bra.edu.bre.springbootTeste.domain.services;
+package bra.edu.bre.spring_rest_Api_sample.domain.services;
 
-import bra.edu.bre.springbootTeste.domain.entidade.User;
-import bra.edu.bre.springbootTeste.domain.repositores.UserRepository;
-import bra.edu.bre.springbootTeste.domain.services.exception.DataBaseException;
-import bra.edu.bre.springbootTeste.domain.services.exception.ResourceNotFoundException;
+import bra.edu.bre.spring_rest_Api_sample.domain.entidade.User;
+import bra.edu.bre.spring_rest_Api_sample.domain.repositores.UserRepository;
+import bra.edu.bre.spring_rest_Api_sample.domain.services.exception.DataBaseException;
+import bra.edu.bre.spring_rest_Api_sample.domain.services.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;

@@ -1,7 +1,7 @@
-package bra.edu.bre.springbootTeste.api.controller;
+package bra.edu.bre.spring_rest_Api_sample.api.controller;
 
-import bra.edu.bre.springbootTeste.domain.entidade.User;
-import bra.edu.bre.springbootTeste.domain.services.UserServices;
+import bra.edu.bre.spring_rest_Api_sample.domain.entidade.User;
+import bra.edu.bre.spring_rest_Api_sample.domain.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,8 +39,8 @@ public class UserController {
         throw new RuntimeException("É necessário especificar pelo menos um valor");
     }
 
-    @PostMapping
-    public ResponseEntity<User> insert(@RequestBody User user){
+    @PostMapping(value = "salvar")
+    public ResponseEntity<User> salvar(@RequestBody User user){
         user = userServices.save(user);
         return ResponseEntity.ok(user);
     }
@@ -52,7 +52,7 @@ public class UserController {
 //        return new ResponseEntity<String>("Excluído com sucesso", HttpStatus.OK);
 //    }
 
-    @DeleteMapping(value = "/delete")//mapeia a url
+    @DeleteMapping(value = "delete")//mapeia a url
     @ResponseBody
     public ResponseEntity<String> delete(@RequestParam Long idUser){
         userServices.deleteById(idUser);

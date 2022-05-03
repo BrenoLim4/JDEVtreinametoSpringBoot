@@ -1,4 +1,4 @@
-package bra.edu.bre.springbootTeste.domain.entidade;
+package bra.edu.bre.spring_rest_Api_sample.domain.entidade;
 
 import lombok.*;
 
@@ -19,7 +19,7 @@ public class User implements Serializable {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
     private String nome;

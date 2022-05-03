@@ -1,0 +1,14 @@
+html{
+    margin: 15%;
+}
+body{
+    background-color: cornflowerblue;
+}
+#exampleModal{
+    display: none;
+    background-color: cadetblue;
+}
+#madalTableBody{
+    max-height: 600px;
+    overflow-y: scroll;
+}
