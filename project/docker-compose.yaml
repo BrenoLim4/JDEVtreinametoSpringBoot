@@ -8,9 +8,12 @@ networks:
     name: db-acess
 
 services:
-  api:  
+  springapi:  
     image: brenolima69/spring-api:latest
     container_name: spring-api
+    build: 
+      dockerfile: ./Dockerfile
+      context: ./src
     ports:
       - 8084:8084
     networks:
