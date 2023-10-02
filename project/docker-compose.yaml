@@ -24,17 +24,11 @@ services:
   spring-api:  
     image: brenolima69/spring-api:latest
     container_name: spring-api
-    build: 
-      dockerfile: ./Dockerfile
-      context: ./src
+    build: .
     ports:
       - 8084:8084
     networks:
       - db-acess
     depends_on:
       - postgres
-    environment:
-      postgres-url: jdbc:postgresql://postgres:5432/spring_boot
-      postgres-username: postgres
-      postgres-password: root
     restart: always
