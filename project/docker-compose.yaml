@@ -14,7 +14,9 @@ services:
     ports:
       - 8084:8084
     networks:
-      - db-acess
+      db-acess:
+        aliases:
+        - db-acess
   postgres:
     image: postgres:latest
     container_name: postgres
@@ -23,7 +25,9 @@ services:
     ports:
       - 5432:5432
     networks:
-      - db-acess
+      db-acess:
+        aliases:
+        - db-acess
     environment:
       POSTGRES_DB: spring_boot
       POSTGRES_USERNAME: postgres
