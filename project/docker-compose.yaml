@@ -16,9 +16,7 @@ services:
     depends_on:
       - postgres
     networks:
-      db-acess:
-        aliases:
-        - db-acess
+      - db-acess
   postgres:
     image: postgres:latest
     container_name: postgres
@@ -27,9 +25,7 @@ services:
     ports:
       - 5432:5432
     networks:
-      db-acess:
-        aliases:
-        - db-acess
+      - db-acess
     environment:
       POSTGRES_DB: spring_boot
       POSTGRES_USERNAME: postgres
