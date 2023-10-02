@@ -5,23 +5,28 @@ volumes:
 networks:
   db-acess:
     driver: bridge
+    name: db-acess
 
 services:
   api:  
     image: brenolima69/spring-api:latest
+    container_name: spring-api
     ports:
       - 8084:8084
     depends_on:
       - postgres
     networks:
+      db-acess:
       - db-acess
   postgres:
     image: postgres:latest
+    container_name: postgres
     volumes:
       - pg-vol:/var/lib/postgresql/data
     ports:
       - 5432:5432
     networks:
+      db-acess:
       - db-acess
     environment:
       POSTGRES_DB: spring_boot
