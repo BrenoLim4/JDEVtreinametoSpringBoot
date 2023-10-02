@@ -7,7 +7,20 @@ networks:
     driver: bridge
     name: db-acess
 
-services:
+services:  
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    volumes:
+      - pg-vol:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - db-acess 
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    restart: always
   spring-api:  
     image: brenolima69/spring-api:latest
     container_name: spring-api
@@ -22,15 +35,8 @@ services:
         - db-acess
     depends_on:
       - postgres
-  postgres:
-    image: postgres:latest
-    container_name: postgres
-    volumes:
-      - pg-vol:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    networks:
-      - db-acess 
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
+      postgres-url: jdbc:postgresql://postgres:5432/spring_boot
+      postgres-username: postgres
+      postgres-password: root
+    restart: always
