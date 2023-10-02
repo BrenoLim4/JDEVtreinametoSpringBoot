@@ -8,7 +8,7 @@ networks:
     name: db-acess
 
 services:
-  springapi:  
+  spring-api:  
     image: brenolima69/spring-api:latest
     container_name: spring-api
     build: 
