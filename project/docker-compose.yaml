@@ -24,5 +24,7 @@ services:
     networks:
       - db-acess
     environment:
+      POSTGRES_DB: spring_boot
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: root
+      POSTGRES_INITDB_ARGS: "--schema=spring_data"
