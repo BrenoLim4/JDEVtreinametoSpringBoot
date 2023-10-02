@@ -13,8 +13,6 @@ services:
     container_name: spring-api
     ports:
       - 8084:8084
-    depends_on:
-      - postgres
     networks:
       - db-acess
   postgres:
