@@ -1,0 +1,28 @@
+version: '3.8'
+volumes: 
+  pg-vol:
+
+networks:
+  db-acess:
+    driver: bridge
+
+services:
+  api:  
+    image: brenolima69/spring-api:latest
+    ports:
+      - 8084:8084
+    depends_on:
+      - postgres
+    networks:
+      - db-acess
+  postgres:
+    image: postgres:latest
+    volumes:
+      - pg-vol:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - db-acess
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: root
