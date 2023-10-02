@@ -30,9 +30,7 @@ services:
     ports:
       - 8084:8084
     networks:
-      db-acess:
-        aliases:
-        - db-acess
+      - db-acess
     depends_on:
       - postgres
     environment:
